@@ -1,0 +1,8 @@
+[submodule "src/main/generated"]
+	path = src/main/generated
+	url = https://github.com/vNerve/vNerveTransmitter.git
+	branch = dist
+[submodule "src/generated"]
+	path = src/generated
+	url = https://github.com/vNerve/vNerveTransmitter.git
+	branch = dist
