@@ -47,4 +47,12 @@ public class RoomWarningMessage implements RoomMessage {
     public int hashCode() {
         return Objects.hash(roomId, message);
     }
+
+    @Override
+    public String toString() {
+        return "RoomWarningMessage{" +
+                "roomId=" + roomId +
+                ", message='" + message + '\'' +
+                '}';
+    }
 }

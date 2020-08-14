@@ -146,4 +146,20 @@ public class GiftMessage implements UserMessage {
     public int hashCode() {
         return Objects.hash(roomId, uid, userName, userAvatarUrl, gold, totalCoin, giftId, giftName, singlePriceCoinRaw, count);
     }
+
+    @Override
+    public String toString() {
+        return "GiftMessage{" +
+                "roomId=" + roomId +
+                ", uid=" + uid +
+                ", userName='" + userName + '\'' +
+                ", userAvatarUrl='" + userAvatarUrl + '\'' +
+                ", gold=" + gold +
+                ", totalCoin=" + totalCoin +
+                ", giftId=" + giftId +
+                ", giftName='" + giftName + '\'' +
+                ", singlePriceCoinRaw=" + singlePriceCoinRaw +
+                ", count=" + count +
+                '}';
+    }
 }

@@ -48,4 +48,12 @@ public class RoomSkinIdChangedMessage implements RoomMessage {
     public int hashCode() {
         return Objects.hash(roomId, skinId);
     }
+
+    @Override
+    public String toString() {
+        return "RoomSkinIdChangedMessage{" +
+                "roomId=" + roomId +
+                ", skinId=" + skinId +
+                '}';
+    }
 }

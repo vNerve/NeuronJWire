@@ -241,4 +241,16 @@ public class DanmakuMessage implements UserMessage {
     public int hashCode() {
         return Objects.hash(roomId, uid, userName, userDetails, lotteryType, message);
     }
+
+    @Override
+    public String toString() {
+        return "DanmakuMessage{" +
+                "roomId=" + roomId +
+                ", uid=" + uid +
+                ", userName='" + userName + '\'' +
+                ", userDetails=" + userDetails +
+                ", lotteryType=" + lotteryType +
+                ", message='" + message + '\'' +
+                '}';
+    }
 }

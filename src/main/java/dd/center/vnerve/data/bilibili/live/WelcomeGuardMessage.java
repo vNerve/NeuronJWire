@@ -72,4 +72,14 @@ public class WelcomeGuardMessage implements UserMessage {
     public int hashCode() {
         return Objects.hash(roomId, uid, userName, level);
     }
+
+    @Override
+    public String toString() {
+        return "WelcomeGuardMessage{" +
+                "roomId=" + roomId +
+                ", uid=" + uid +
+                ", userName='" + userName + '\'' +
+                ", level=" + level +
+                '}';
+    }
 }

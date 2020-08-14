@@ -176,6 +176,24 @@ public class SuperChatMessage implements UserMessage {
         return Objects.hash(roomId, uid, userName, userDetails, message, id, token, priceCny, priceCoin, lastingTime, startTime, endTime);
     }
 
+    @Override
+    public String toString() {
+        return "SuperChatMessage{" +
+                "roomId=" + roomId +
+                ", uid=" + uid +
+                ", userName='" + userName + '\'' +
+                ", userDetails=" + userDetails +
+                ", message='" + message + '\'' +
+                ", id=" + id +
+                ", token='" + token + '\'' +
+                ", priceCny=" + priceCny +
+                ", priceCoin=" + priceCoin +
+                ", lastingTime=" + lastingTime +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                '}';
+    }
+
     public static class UserDetails {
         /** 用户是否为本直播间房管 */
         private boolean admin;
@@ -292,6 +310,20 @@ public class SuperChatMessage implements UserMessage {
         @Override
         public int hashCode() {
             return Objects.hash(admin, userLevelBorderColor, title, medal, level, guardLevel, liveVipLevel, userAvatarUrl);
+        }
+
+        @Override
+        public String toString() {
+            return "UserDetails{" +
+                    "admin=" + admin +
+                    ", userLevelBorderColor=" + userLevelBorderColor +
+                    ", title='" + title + '\'' +
+                    ", medal=" + medal +
+                    ", level=" + level +
+                    ", guardLevel=" + guardLevel +
+                    ", liveVipLevel=" + liveVipLevel +
+                    ", userAvatarUrl='" + userAvatarUrl + '\'' +
+                    '}';
         }
     }
 }

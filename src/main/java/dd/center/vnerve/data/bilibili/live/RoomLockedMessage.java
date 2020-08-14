@@ -49,4 +49,12 @@ public class RoomLockedMessage implements RoomMessage {
     public int hashCode() {
         return Objects.hash(roomId, lockedUntil);
     }
+
+    @Override
+    public String toString() {
+        return "RoomLockedMessage{" +
+                "roomId=" + roomId +
+                ", lockedUntil=" + lockedUntil +
+                '}';
+    }
 }

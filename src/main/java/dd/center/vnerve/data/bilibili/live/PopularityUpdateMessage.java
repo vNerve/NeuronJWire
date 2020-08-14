@@ -54,4 +54,12 @@ public class PopularityUpdateMessage implements RoomMessage {
     public int hashCode() {
         return Objects.hash(roomId, popularity);
     }
+
+    @Override
+    public String toString() {
+        return "PopularityUpdateMessage{" +
+                "roomId=" + roomId +
+                ", popularity=" + popularity +
+                '}';
+    }
 }

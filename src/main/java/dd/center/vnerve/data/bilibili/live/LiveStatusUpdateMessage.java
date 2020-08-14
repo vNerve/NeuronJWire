@@ -67,4 +67,13 @@ public class LiveStatusUpdateMessage implements RoomMessage {
     public int hashCode() {
         return Objects.hash(roomId, newStatus, message);
     }
+
+    @Override
+    public String toString() {
+        return "LiveStatusUpdateMessage{" +
+                "roomId=" + roomId +
+                ", newStatus=" + newStatus +
+                ", message='" + message + '\'' +
+                '}';
+    }
 }

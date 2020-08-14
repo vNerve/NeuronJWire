@@ -49,4 +49,12 @@ public class RoomAdminChangedMessage implements RoomMessage {
     public int hashCode() {
         return Objects.hash(roomId, admins);
     }
+
+    @Override
+    public String toString() {
+        return "RoomAdminChangedMessage{" +
+                "roomId=" + roomId +
+                ", admins=" + admins +
+                '}';
+    }
 }

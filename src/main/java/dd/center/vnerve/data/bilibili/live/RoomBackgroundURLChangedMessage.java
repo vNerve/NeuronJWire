@@ -48,4 +48,12 @@ public class RoomBackgroundURLChangedMessage implements RoomMessage {
     public int hashCode() {
         return Objects.hash(roomId, url);
     }
+
+    @Override
+    public String toString() {
+        return "RoomBackgroundURLChangedMessage{" +
+                "roomId=" + roomId +
+                ", url='" + url + '\'' +
+                '}';
+    }
 }

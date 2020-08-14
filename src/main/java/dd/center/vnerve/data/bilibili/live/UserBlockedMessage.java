@@ -48,4 +48,12 @@ public class UserBlockedMessage implements UserMessage {
     public int hashCode() {
         return Objects.hash(roomId, uid);
     }
+
+    @Override
+    public String toString() {
+        return "UserBlockedMessage{" +
+                "roomId=" + roomId +
+                ", uid=" + uid +
+                '}';
+    }
 }

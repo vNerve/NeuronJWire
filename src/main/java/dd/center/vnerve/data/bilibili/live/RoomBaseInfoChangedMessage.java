@@ -97,4 +97,16 @@ public class RoomBaseInfoChangedMessage implements RoomMessage {
     public int hashCode() {
         return Objects.hash(roomId, title, areaId, areaName, parentAreaId, parentAreaName);
     }
+
+    @Override
+    public String toString() {
+        return "RoomBaseInfoChangedMessage{" +
+                "roomId=" + roomId +
+                ", title='" + title + '\'' +
+                ", areaId=" + areaId +
+                ", areaName='" + areaName + '\'' +
+                ", parentAreaId=" + parentAreaId +
+                ", parentAreaName='" + parentAreaName + '\'' +
+                '}';
+    }
 }

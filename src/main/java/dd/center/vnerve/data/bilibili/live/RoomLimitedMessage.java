@@ -63,4 +63,13 @@ public class RoomLimitedMessage implements RoomMessage {
     public int hashCode() {
         return Objects.hash(roomId, type, delayRange);
     }
+
+    @Override
+    public String toString() {
+        return "RoomLimitedMessage{" +
+                "roomId=" + roomId +
+                ", type='" + type + '\'' +
+                ", delayRange=" + delayRange +
+                '}';
+    }
 }

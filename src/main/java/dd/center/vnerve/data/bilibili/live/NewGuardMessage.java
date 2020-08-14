@@ -122,6 +122,20 @@ public class NewGuardMessage implements UserMessage {
         return Objects.hash(roomId, uid, userName, guardLevel, totalCoin, count, durationLevel, buyType);
     }
 
+    @Override
+    public String toString() {
+        return "NewGuardMessage{" +
+                "roomId=" + roomId +
+                ", uid=" + uid +
+                ", userName='" + userName + '\'' +
+                ", guardLevel=" + guardLevel +
+                ", totalCoin=" + totalCoin +
+                ", count=" + count +
+                ", durationLevel=" + durationLevel +
+                ", buyType=" + buyType +
+                '}';
+    }
+
     /** 判断上舰操作是续费还是新加入 */
     public enum GuardBuyType {
         /** 未知 */

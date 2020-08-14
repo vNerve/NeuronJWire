@@ -94,4 +94,16 @@ public class MedalInfo {
     public int hashCode() {
         return Objects.hash(name, level, color, streamerUid, streamerName, streamerRoomId);
     }
+
+    @Override
+    public String toString() {
+        return "MedalInfo{" +
+                "name='" + name + '\'' +
+                ", level=" + level +
+                ", color=" + color +
+                ", streamerUid=" + streamerUid +
+                ", streamerName='" + streamerName + '\'' +
+                ", streamerRoomId=" + streamerRoomId +
+                '}';
+    }
 }

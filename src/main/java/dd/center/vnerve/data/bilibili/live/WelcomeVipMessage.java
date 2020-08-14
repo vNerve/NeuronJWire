@@ -85,4 +85,15 @@ public class WelcomeVipMessage implements UserMessage {
     public int hashCode() {
         return Objects.hash(roomId, uid, userName, level, admin);
     }
+
+    @Override
+    public String toString() {
+        return "WelcomeVipMessage{" +
+                "roomId=" + roomId +
+                ", uid=" + uid +
+                ", userName='" + userName + '\'' +
+                ", level=" + level +
+                ", admin=" + admin +
+                '}';
+    }
 }

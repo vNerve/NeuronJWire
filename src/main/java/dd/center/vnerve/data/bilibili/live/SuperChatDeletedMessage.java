@@ -48,4 +48,12 @@ public class SuperChatDeletedMessage implements RoomMessage {
     public int hashCode() {
         return Objects.hash(roomId, ids);
     }
+
+    @Override
+    public String toString() {
+        return "SuperChatDeletedMessage{" +
+                "roomId=" + roomId +
+                ", ids=" + ids +
+                '}';
+    }
 }
