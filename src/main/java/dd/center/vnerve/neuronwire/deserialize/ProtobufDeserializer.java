@@ -11,7 +11,7 @@ import static vNerve.bilibili.live.UserMessageOuterClass.*;
 public class ProtobufDeserializer {
     private static final ZoneId biliveZoneId = ZoneOffset.ofTotalSeconds(8 * 3600); // UTC+8
 
-    public dd.center.vnerve.data.bilibili.live.RoomMessage deserialize(byte[] data) throws DeserializeFailedException {
+    public static dd.center.vnerve.data.bilibili.live.RoomMessage deserialize(byte[] data) throws DeserializeFailedException {
         try {
             RoomMessage rootMessage = RoomMessage.parseFrom(data);
 
@@ -21,7 +21,7 @@ public class ProtobufDeserializer {
         }
     }
 
-    public dd.center.vnerve.data.bilibili.live.RoomMessage convert(RoomMessage roomMessage) throws DeserializeFailedException {
+    public static dd.center.vnerve.data.bilibili.live.RoomMessage convert(RoomMessage roomMessage) throws DeserializeFailedException {
         int roomId = roomMessage.getRoomId();
         if (roomMessage.getPayloadCase() == null)
             throw new DeserializeFailedException("Invalid room message: Unknown payload type");
@@ -85,7 +85,7 @@ public class ProtobufDeserializer {
         }
     }
 
-    public dd.center.vnerve.data.bilibili.live.UserMessage convert(int roomId, UserMessage userMessage) throws DeserializeFailedException {
+    public static dd.center.vnerve.data.bilibili.live.UserMessage convert(int roomId, UserMessage userMessage) throws DeserializeFailedException {
         UserInfo user = userMessage.getUser();
         long uid = user.getUid();
         if (userMessage.getPayloadCase() == null)
@@ -173,31 +173,31 @@ public class ProtobufDeserializer {
         }
     }
 
-    private dd.center.vnerve.data.bilibili.live.LiveStatus buildLiveStatus(LiveStatus raw) {
+    private static dd.center.vnerve.data.bilibili.live.LiveStatus buildLiveStatus(LiveStatus raw) {
         return dd.center.vnerve.data.bilibili.live.LiveStatus.values()[raw.ordinal()];
     }
 
-    private dd.center.vnerve.data.bilibili.live.NewGuardMessage.GuardDurationLevel buildGuardDurationLevel(GuardDurationLevel level) {
+    private static dd.center.vnerve.data.bilibili.live.NewGuardMessage.GuardDurationLevel buildGuardDurationLevel(GuardDurationLevel level) {
         return dd.center.vnerve.data.bilibili.live.NewGuardMessage.GuardDurationLevel.values()[level.ordinal()];
     }
 
-    private dd.center.vnerve.data.bilibili.live.NewGuardMessage.GuardBuyType buildGuardBuyType(GuardBuyType level) {
+    private static dd.center.vnerve.data.bilibili.live.NewGuardMessage.GuardBuyType buildGuardBuyType(GuardBuyType level) {
         return dd.center.vnerve.data.bilibili.live.NewGuardMessage.GuardBuyType.values()[level.ordinal()];
     }
 
-    private dd.center.vnerve.data.bilibili.live.GuardLevel buildGuardLevel(GuardLevel level) {
+    private static dd.center.vnerve.data.bilibili.live.GuardLevel buildGuardLevel(GuardLevel level) {
         return dd.center.vnerve.data.bilibili.live.GuardLevel.values()[level.ordinal()];
     }
 
-    private dd.center.vnerve.data.bilibili.live.LiveVipLevel buildLiveVipLevel(LiveVipLevel level) {
+    private static dd.center.vnerve.data.bilibili.live.LiveVipLevel buildLiveVipLevel(LiveVipLevel level) {
         return dd.center.vnerve.data.bilibili.live.LiveVipLevel.values()[level.ordinal()];
     }
 
-    private dd.center.vnerve.data.bilibili.live.DanmakuMessage.LotteryDanmakuType buildLotteryDanmakuType(LotteryDanmakuType type) {
+    private static dd.center.vnerve.data.bilibili.live.DanmakuMessage.LotteryDanmakuType buildLotteryDanmakuType(LotteryDanmakuType type) {
         return dd.center.vnerve.data.bilibili.live.DanmakuMessage.LotteryDanmakuType.values()[type.ordinal()];
     }
 
-    private dd.center.vnerve.data.bilibili.live.MedalInfo buildMedalInfo(MedalInfo raw) {
+    private static dd.center.vnerve.data.bilibili.live.MedalInfo buildMedalInfo(MedalInfo raw) {
         return new dd.center.vnerve.data.bilibili.live.MedalInfo(
                 raw.getMedalName(), raw.getMedalLevel(), raw.getMedalColor(),
                 raw.getStreamerUid(), raw.getStreamerName(), raw.getStreamerRoomid()
